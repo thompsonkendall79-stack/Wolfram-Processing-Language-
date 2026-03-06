@@ -5,23 +5,15 @@ A positive definite matrix must have positive diagonal entires. A is positive de
 ```wolfram
 In[36]:= mA = {{1, 1, 0}, {1, 4, 2}, {0, 2, 3}} mB = {{5,-6,-6}, {-1, 4, 2}, {3,-6,-4}} mC = {{1, 0, 1}, {0, 1, 1}, {1, 1, 2}} Out[36]= {{1, 1, 0}, {1, 4, 2}, {0, 2, 3}} Out[37]= {{5,-6,-6}, {-1, 4, 2}, {3,-6,-4}} Out[38]= {{1, 0, 1}, {0, 1, 1}, {1, 1, 2}}
 In[45]:= NegativeDefiniteMatrixQ[mA] NegativeDefiniteMatrixQ[mB] NegativeDefiniteMatrixQ[mC] 
-Out[45]= False 
-Out[46]= False 
-Out[47]= False
-In[48]:= NegativeSemidefiniteMatrixQ[mA] NegativeSemidefiniteMatrixQ[mB] NegativeSemidefiniteMatrixQ[mC]
-Out[48]= False 
-Out[49]= False 
-Out[50]= False
-PositiveSemidefiniteMatrixQ[mA] PositiveSemidefiniteMatrixQ[mB] PositiveSemidefiniteMatrixQ[mC]
-Out[51]= True 
-Out[52]= False 
-Out[53]= True 
-In[54]:= PositiveDefiniteMatrixQ[mA] PositiveDefiniteMatrixQ[mB] PositiveDefiniteMatrixQ[mC] 
-Out[54]= True 
-Out[55]= False 
-Out[56]= False
 
-Plotting 3D graphs 
+In[48]:= NegativeSemidefiniteMatrixQ[mA] NegativeSemidefiniteMatrixQ[mB] NegativeSemidefiniteMatrixQ[mC]
+
+PositiveSemidefiniteMatrixQ[mA] PositiveSemidefiniteMatrixQ[mB] PositiveSemidefiniteMatrixQ[mC]
+
+In[54]:= PositiveDefiniteMatrixQ[mA] PositiveDefiniteMatrixQ[mB] PositiveDefiniteMatrixQ[mC] 
+
+#Plotting 3D graphs
+
 In[59]:= Clear[mA, mB]
 In[183]:= mA = {{4, 0}, {0, 3}}; mAx = mA-λ 0 0 λ y =Det[mAx] mB = {{3,-2}, {-2, 7}}; mBx = mB-(λ 0 0 λ) y1 = Det[mBx] Solve[(4-λ)(3-λ) == 0, λ] Solve[(3-λ)(7-λ) == 0, λ] mX = (x1 x2); Transpose[mX].mA.mX mX1 = (x1 x2 ); Transpose[mX1].mB.mX1 
 In[62]:= PositiveDefiniteMatrixQ[mA] PositiveDefiniteMatrixQ[mB]
