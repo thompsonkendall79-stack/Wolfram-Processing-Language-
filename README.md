@@ -54,6 +54,7 @@ I n[3]= Solution to the Money Supply System:Currency held by public (C) = 727.27
 
 Graphing Transformed Matrices
 In[4]:= transformSquare[T_]:= Module[{square,transformed},square=Polygon[{{0,0},{1,0},{1,1},{0,1}}]; (*unit square*)transformed=GeometricTransformation[square,T]; Graphics[{Style[square,LightGray],Style[transformed,Blue,Thick]}, Axes->True,PlotRange->{{-2,2},{-2,2}},ImageSize->200]] 
-```
+
 In[5]:= matrices={{{1.5,0},{0,1}},{{1,0},{0,1.5}}, {{1.5,0},{0,1.5}},{{-1,0},{0,1}},{{-1,0},{0,-1}}}; GraphicsRow[transformSquare/@matrices,Spacings->Scaled[0.5]]
 In[6 ]:= θ = 60 Degree; Cmat = RotationMatrix[θ]; MatrixQ[Cmat] (*Should return True*) transformSquare[m_] := GeometricTransformation[Polygon[{{0, 0}, {1, 0}, {1, 1}, {0, 1}}], m] Graphics[{LightGray, Polygon[{{0, 0}, {1, 0}, {1, 1}, {0, 1}}], Red, transformSquare[Cmat]}, Axes -> True, PlotRange -> {{-2, 2}, {-2, 2}}, ImageSize ->300] Det[A] (* =1.1×0.9=0.99*) Det[B] (* =1.2×0.9=1.08*) Det[C] (* =1.0—pure rotation*) Det[CA] (* =Det[C]*Det[A]=0.99*) Det[CB] (* =Det[C]*Det[B]=1.08*)
+```
